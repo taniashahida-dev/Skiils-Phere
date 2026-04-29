@@ -4,6 +4,7 @@ import { FiUser } from "react-icons/fi";
 import { GrTechnology } from "react-icons/gr";
 
 const Navbar = () => {
+
   return (
     <div className=" p-4 border-b border-b-gray-500 sticky top-0">
     <div className="flex justify-between items-center w-10/12 mx-auto">
@@ -14,7 +15,7 @@ const Navbar = () => {
       <div>
         <ul className="flex gap-8">
           <Navlink href={"/"}>Home</Navlink>
-          <Navlink href={"/courses"}>Courses</Navlink>
+          <Navlink href={"/courses"}> Courses</Navlink>
           <Navlink href={"/myprofile"}>My Profile</Navlink>
         </ul>
       </div>
