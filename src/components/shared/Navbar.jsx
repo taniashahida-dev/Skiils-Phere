@@ -4,6 +4,7 @@ import React from "react";
 import Navlink from "./Navlink";
 import { GrTechnology } from "react-icons/gr";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -11,7 +12,7 @@ const Navbar = () => {
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="p-4 border-b border-b-gray-500 sticky top-0  z-50"
+      className="p-4 border-b border-b-gray-500 sticky top-0  z-50 bg-gray-800"
     >
       <div className="flex flex-col md:flex-row justify-between items-center w-10/12 mx-auto gap-4">
         
@@ -37,19 +38,22 @@ const Navbar = () => {
 
         {/* Buttons */}
         <div className="flex flex-col md:flex-row gap-4 items-center">
+         <Link href={'/login'}>
           <motion.button
             whileHover={{ scale: 1.05 }}
-            className="border border-gray-500 p-2 md:px-6  rounded-2xl text-lg px-6 hover:bg-purple-800 transition"
+            className="border border-gray-300 p-2 md:px-6  rounded-2xl text-lg px-6 hover:bg-gray-900 transition"
           >
             Login
           </motion.button>
+         </Link>
 
-          <motion.button
+        <Link href={'/registration'}>  <motion.button
             whileHover={{ scale: 1.05 }}
-            className="border border-gray-500 p-2  md:px-6 rounded-2xl text-lg px-6 hover:bg-purple-800 transition"
+            className="border border-gray-300 p-2  md:px-6 rounded-2xl text-lg px-6  hover:bg-gray-900 transition"
           >
             Register
           </motion.button>
+          </Link>
         </div>
       </div>
     </motion.div>
