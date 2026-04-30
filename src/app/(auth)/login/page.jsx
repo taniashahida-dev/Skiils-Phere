@@ -1,6 +1,7 @@
 'use client'
 import Link from "next/link";
 import { useForm } from "react-hook-form";
+import { FcGoogle } from "react-icons/fc";
 
 const LoginPage = () => {
   const {
@@ -55,17 +56,23 @@ errors.email && (<p className="text-xs text-red-500">{errors.email.message}</p>)
 errors.password && (<p className="text-xs text-red-500">{errors.password.message}</p>)
             }
           </fieldset>
-          <button className="btn bg-purple-600 w-full mt-10 border-none rounded-xl">
+          <button className="btn bg-purple-600 w-full my-4 border-none rounded-xl">
             Login
           </button>
-          <p className="my-2 text-sm">
+        
+          
+        </div>
+      </form>
+        <div className="divider">OR</div>
+          <div className="flex items-center gap-2 justify-center border border-gray-500 bg-gray-800 p-2 rounded-xl cursor-pointer">
+            Login with <span className="text-xl flex items-center"><FcGoogle /><p>oogle</p> </span>
+          </div>
+          <p className="my-3 text-sm">
             New here ?{" "}
             <Link className="text-purple-400 " href={"/registration"}>
               Create a Skiils-Phere Account
             </Link>{" "}
           </p>
-        </div>
-      </form>
     </div>
   );
 };
