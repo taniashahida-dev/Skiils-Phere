@@ -1,7 +1,9 @@
-'use client'
+"use client";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { FcGoogle } from "react-icons/fc";
+import { motion } from "framer-motion";
+import { authClient } from "@/lib/auth-client";
 
 const LoginPage = () => {
   const {
@@ -9,71 +11,103 @@ const LoginPage = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-const handleLogin=async(data)=>{
-    //  const { data:res, error } = await authClient.signIn.email({
-    //   email:data.email,
-    //   password: data.password,
-    //   callbackURL: "/",
-    //   rememberMe: true,
-    // });
-    // console.log(res,error)
-    // if (error) {
-    //   alert(error.message)
-    //   return
-    // } else {
-    //   alert("Login Successful")
-    // }
 
-}
+  const handleLogin = async (data) => {
+     const { data:res, error } = await authClient.signIn.email({ 
+  email:data.email,
+  password: data.password, 
+   callbackURL: "/",
+      rememberMe: true,
+  }); 
+  console.log(res,error) 
+  if (error) { 
+    alert(error.message) 
+  return 
+  } else { 
+  alert("Login Successful")
+    }
+  };
 
   return (
-    <div className="max-h-[80vh] border border-gray-400 shadow-lg bg-gray-700  mt-30 p-6 w-sm rounded-xl mx-auto  ">
-      <form onClick={handleSubmit(handleLogin)}>
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4 }}
+      className="max-h-[80vh] border border-gray-400 shadow-lg bg-gray-700 mt-20 p-6 w-[90%] sm:w-sm rounded-xl mx-auto"
+    >
+      <form onSubmit={handleSubmit(handleLogin)}>
         <div className="mx-auto space-y-2">
-          <h1 className=" font-bold text-3xl mb-4 ">Login Your Account</h1>
+          
+          <h1 className="font-bold text-2xl sm:text-3xl mb-4 text-center sm:text-left">
+            Login Your Account
+          </h1>
+
+         
           <fieldset className="fieldset">
-              <legend className="fieldset-legend">Email</legend>
+            <legend className="fieldset-legend">Email</legend>
             <input
               type="email"
-              className="input "
+              className="input w-full focus:ring-2 focus:ring-purple-500"
               placeholder="Enter Your Email"
-              {...register("email", { required: 'Email is required**' })}
+              {...register("email", { required: "Email is required**" })}
             />
-            {
-errors.email && (<p className="text-xs text-red-500">{errors.email.message}</p>)
-            }
+            {errors.email && (
+              <p className="text-xs text-red-500">
+                {errors.email.message}
+              </p>
+            )}
           </fieldset>
 
           <fieldset className="fieldset">
             <legend className="fieldset-legend">Password</legend>
             <input
               type="password"
-              className="input"
+              className="input w-full focus:ring-2 focus:ring-purple-500"
               placeholder="Enter Your Password"
-                {...register("password", { required: 'Please enter password**' })}
+              {...register("password", {
+                required: "Please enter password**",
+              })}
             />
-              {
-errors.password && (<p className="text-xs text-red-500">{errors.password.message}</p>)
-            }
+            {errors.password && (
+              <p className="text-xs text-red-500">
+                {errors.password.message}
+              </p>
+            )}
           </fieldset>
-          <button className="btn bg-purple-600 w-full my-4 border-none rounded-xl">
+
+       
+          <motion.button
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
+            className="btn bg-purple-600 w-full my-4 border-none rounded-xl"
+          >
             Login
-          </button>
-        
-          
+          </motion.button>
         </div>
       </form>
-        <div className="divider">OR</div>
-          <div className="flex items-center gap-2 justify-center border border-gray-500 bg-gray-800 p-2 rounded-xl cursor-pointer">
-            Login with <span className="text-xl flex items-center"><FcGoogle /><p>oogle</p> </span>
-          </div>
-          <p className="my-3 text-sm">
-            New here ?{" "}
-            <Link className="text-purple-400 " href={"/registration"}>
-              Create a Skiils-Phere Account
-            </Link>{" "}
-          </p>
-    </div>
+
+  
+      <div className="divider">OR</div>
+
+      <motion.div
+        whileHover={{ scale: 1.03 }}
+        className="flex items-center gap-2 justify-center border border-gray-500 bg-gray-800 p-2 rounded-xl cursor-pointer"
+      >
+        Login with
+        <span className="text-xl flex items-center">
+          <FcGoogle />
+          <p>oogle</p>
+        </span>
+      </motion.div>
+
+      {/* Register Link */}
+      <p className="my-3 text-sm text-center sm:text-left">
+        New here?
+        <Link className="text-purple-400" href={"/registration"}>
+          Create a Skills-Phere Account
+        </Link>
+      </p>
+    </motion.div>
   );
 };
 
