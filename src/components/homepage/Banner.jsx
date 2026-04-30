@@ -23,16 +23,18 @@ const Banner = () => {
       <div className="space-y-4 relative z-10">
         
         <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ y: -80, opacity: 0}}
+          animate={{ y: 0, opacity: 1  }}
+          transition={{ duration: 0.5 }}
           className="bg-[#3b378a] inline-block px-4 py-1 rounded-full text-sm"
         >
           🟢 500+ courses now available
         </motion.p>
 
         <motion.h1
-          initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+         initial={{ y: -80, opacity: 0}}
+          animate={{ y: 0, opacity: 1  }}
+          transition={{ duration: 0.5 }}
           className="text-3xl md:text-5xl font-bold"
         >
           Upgrade your skills. <br />
@@ -41,8 +43,9 @@ const Banner = () => {
         </motion.h1>
 
         <motion.p
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+          initial={{ y: -80, opacity: 0}}
+          animate={{ y: 0, opacity: 1  }}
+          transition={{ duration: 0.5 }}
           className="text-gray-300"
         >
           Learn from industry experts at your own pace. Earn certificates and

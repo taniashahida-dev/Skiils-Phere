@@ -12,7 +12,7 @@ const Footer = () => {
       transition={{ duration: 0.6 }}
       className="bg-purple-950 text-white px-6 py-10"
     >
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-10">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-3 grid-cols-2 justify-between gap-10">
         
         {/* Left Section */}
         <motion.div
