@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { authClient } from "@/lib/auth-client";
+import { toast } from "react-toastify";
 
 
 const RegPage = () => {
@@ -23,9 +24,12 @@ console.log(data)
        email:data.email,  password: data.password,  }); 
         console.log(res,error)
        if (error)
-         {  alert(error.message)
+         { 
+         
+           toast.warning(error.message)
            return  }
-        else { alert("Login Successful") 
+        else { 
+          toast.success("Signin Successfull!!")
           router.push("/login")
          }
          
