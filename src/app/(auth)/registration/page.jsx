@@ -26,9 +26,34 @@ const handleReg=async(data)=>{
 
     return (
         <div className="max-h-[80vh] border border-gray-400 shadow-lg bg-gray-700  mt-30 p-6 w-sm rounded-xl mx-auto  ">
-      <form onClick={handleSubmit(handleLogin)}>
+      <form onClick={handleSubmit(handleReg)}>
         <div className="mx-auto space-y-2">
-          <h1 className=" font-bold text-3xl mb-4 ">Login Your Account</h1>
+          <h1 className=" font-bold text-3xl mb-4 ">Create Your Account</h1>
+
+          <fieldset className="fieldset">
+              <legend className="fieldset-legend">Name</legend>
+            <input
+              type="text"
+              className="input "
+              placeholder="Enter Your Name"
+              {...register("name", { required: 'Name is required**' })}
+            />
+            {
+errors.name && (<p className="text-xs text-red-500">{errors.name.message}</p>)
+            }
+          </fieldset>
+          <fieldset className="fieldset">
+              <legend className="fieldset-legend">Photo-URL(Link)</legend>
+            <input
+              type="url"
+              className="input "
+              placeholder="URL"
+              {...register("photo", { required: 'Photo is required**' })}
+            />
+            {
+errors.photo && (<p className="text-xs text-red-500">{errors.photo.message}</p>)
+            }
+          </fieldset>
           <fieldset className="fieldset">
               <legend className="fieldset-legend">Email</legend>
             <input
@@ -55,14 +80,9 @@ errors.password && (<p className="text-xs text-red-500">{errors.password.message
             }
           </fieldset>
           <button className="btn bg-purple-600 w-full mt-10 border-none rounded-xl">
-            Login
+            Register
           </button>
-          <p className="my-2 text-sm">
-            New here ?{" "}
-            <Link className="text-purple-400 " href={"/registration"}>
-              Create a Skiils-Phere Account
-            </Link>{" "}
-          </p>
+         
         </div>
       </form>
     </div>
