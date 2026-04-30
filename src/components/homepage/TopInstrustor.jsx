@@ -1,0 +1,50 @@
+"use client";
+import { motion } from "framer-motion"
+
+const TopInstrustor = () => {
+    return (
+          <div className="p-6 md:p-12 bg-[#1f1f1f] text-white">
+      
+      <div className="mb-6">
+        <h1 className="text-2xl font-bold">Top instructors</h1>
+        <p className="text-gray-400 text-sm">
+          Learn from the best in their fields
+        </p>
+      </div>
+
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        
+        {[
+          { name: "John Doe", role: "Full-Stack Dev", courses: 12, rating: 4.9, initials: "JD" },
+          { name: "Sarah Lee", role: "UX Designer", courses: 8, rating: 4.9, initials: "SL" },
+          { name: "Mark Taylor", role: "Growth Marketer", courses: 6, rating: 4.8, initials: "MT" },
+          { name: "Aisha Raza", role: "Data Scientist", courses: 10, rating: 4.7, initials: "AR" },
+        ].map((item, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: i * 0.2 }}
+            whileHover={{ scale: 1.05 }}
+            className="border border-gray-700 rounded-xl p-5 text-center hover:border-purple-500 transition"
+          >
+            
+            <div className="w-14 h-14 mx-auto rounded-full bg-gray-300 text-black flex items-center justify-center font-bold mb-3">
+              {item.initials}
+            </div>
+
+            <h2 className="font-semibold">{item.name}</h2>
+            <p className="text-gray-400 text-sm">{item.role}</p>
+
+            <p className="text-purple-400 text-sm mt-2">
+              {item.courses} courses • ★{item.rating}
+            </p>
+          </motion.div>
+        ))}
+
+      </div>
+        </div>
+    );
+};
+
+export default TopInstrustor;
