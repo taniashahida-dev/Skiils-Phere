@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { FcGoogle } from "react-icons/fc";
 import { motion } from "framer-motion";
 import { authClient } from "@/lib/auth-client";
+import { toast } from "react-toastify";
 
 const LoginPage = () => {
   const {
@@ -21,10 +22,12 @@ const LoginPage = () => {
   }); 
   console.log(res,error) 
   if (error) { 
-    alert(error.message) 
+   
+    toast.warning(error.message)
   return 
   } else { 
-  alert("Login Successful")
+
+  toast.success("Login Successful!!!")
     }
   };
 
