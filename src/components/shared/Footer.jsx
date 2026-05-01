@@ -12,7 +12,7 @@ const Footer = () => {
       transition={{ duration: 0.6 }}
       className="bg-purple-950 text-white px-6 py-10"
     >
-      <div className="max-w-7xl mx-auto grid md:grid-cols-3 grid-cols-2 justify-between gap-10">
+      <div className="md:w-10/12 w-11/12 mx-auto grid md:grid-cols-4 grid-cols-2 justify-between gap-10">
         
         {/* Left Section */}
         <motion.div
@@ -35,18 +35,7 @@ const Footer = () => {
             skill-based education.
           </p>
 
-          {/* Social Icons */}
-          <div className="flex justify-center md:justify-start gap-4 text-xl">
-            {[FaFacebookF, ImLinkedin2, FaGithub].map((Icon, i) => (
-              <motion.span
-                key={i}
-                whileHover={{ scale: 1.2, rotate: 5 }}
-                className="bg-gray-600 p-2 rounded-xl hover:bg-purple-500 cursor-pointer"
-              >
-                <Icon />
-              </motion.span>
-            ))}
-          </div>
+        
         </motion.div>
 
         {/* Quick Links */}
@@ -91,6 +80,27 @@ const Footer = () => {
               )
             )}
           </ul>
+        </motion.div>
+
+         <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="text-center md:text-left"
+        >
+          <h1 className="text-2xl font-bold text-purple-400 mb-2">Follow Us</h1>
+         {/* Social Icons */}
+          <div className="flex justify-center md:justify-start gap-4 text-xl">
+            {[FaFacebookF, ImLinkedin2, FaGithub].map((Icon, i) => (
+              <motion.span
+                key={i}
+                whileHover={{ scale: 1.2, rotate: 5 }}
+                className="bg-gray-600 p-2 rounded-xl hover:bg-purple-500 cursor-pointer"
+              >
+                <Icon />
+              </motion.span>
+            ))}
+          </div>
         </motion.div>
 
       </div>
