@@ -1,0 +1,156 @@
+[
+  {
+    "id": 1,
+    "title": "Complete Web Development Bootcamp",
+    "instructor": "John Doe",
+    "duration": "20 hours",
+    "rating": 4.8,
+    "level": "Beginner",
+    "description": "Learn full-stack web development from scratch.",
+    "image": "https://ibb.co.com/SD0Dsdz3",
+    "category": "Development"
+  },
+  {
+    "id": 2,
+    "title": "Advanced React Mastery",
+    "instructor": "Jane Smith",
+    "duration": "15 hours",
+    "rating": 4.9,
+    "level": "Advanced",
+    "description": "Master React with hooks, context, and advanced patterns.",
+    "image": "https://ibb.co.com/39BPhp1D",
+    "category": "Development"
+  },
+  {
+    "id": 3,
+    "title": "UI/UX Design Fundamentals",
+    "instructor": "Alex Johnson",
+    "duration": "12 hours",
+    "rating": 4.7,
+    "level": "Beginner",
+    "description": "Learn the basics of UI/UX design.",
+    "image": "https://ibb.co.com/Y780xRnv",
+    "category": "Design"
+  },
+  {
+    "id": 4,
+    "title": "Digital Marketing Essentials",
+    "instructor": "Emily Davis",
+    "duration": "10 hours",
+    "rating": 4.6,
+    "level": "Beginner",
+    "description": "Learn SEO, social media, and online marketing.",
+    "image": "https://ibb.co.com/BKnfHhbK",
+    "category": "Marketing"
+  },
+  {
+    "id": 5,
+    "title": "Python for Data Science",
+    "instructor": "Michael Brown",
+    "duration": "18 hours",
+    "rating": 4.8,
+    "level": "Intermediate",
+    "description": "Analyze data using Python libraries.",
+    "image": "https://ibb.co.com/gZ8zy5ZJ",
+    "category": "Data Science"
+  },
+  {
+    "id": 6,
+    "title": "Graphic Design Masterclass",
+    "instructor": "Sophia Wilson",
+    "duration": "14 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Master Photoshop and Illustrator.",
+    "image": "https://ibb.co.com/QvtJKtyL",
+    "category": "Design"
+  },
+  {
+    "id": 7,
+    "title": "JavaScript Deep Dive",
+    "instructor": "Nick Morgan",
+    "duration": "16 hours",
+    "rating": 4.9,
+    "level": "Advanced",
+    "description": "Understand JS concepts deeply.",
+    "image": "https://ibb.co.com/k210gHwV",
+    "category": "Development"
+  },
+  {
+    "id": 8,
+    "title": "Node.js Backend Development",
+    "instructor": "Chris Martin",
+    "duration": "13 hours",
+    "rating": 4.8,
+    "level": "Intermediate",
+    "description": "Build scalable backend apps.",
+    "image": "https://ibb.co.com/HLn2LfSm",
+    "category": "Development"
+  },
+  {
+    "id": 9,
+    "title": "SEO Optimization Course",
+    "instructor": "Olivia Taylor",
+    "duration": "9 hours",
+    "rating": 4.6,
+    "level": "Beginner",
+    "description": "Improve website ranking on Google.",
+    "image": "https://ibb.co.com/yB7bzXw9",
+    "category": "Marketing"
+  },
+  {
+    "id": 10,
+    "title": "Mobile App Design",
+    "instructor": "Daniel White",
+    "duration": "11 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Design mobile apps with Figma.",
+    "image": "https://ibb.co.com/Ld9kdjdf",
+    "category": "Design"
+  },
+  {
+    "id": 11,
+    "title": "Machine Learning Basics",
+    "instructor": "James Anderson",
+    "duration": "20 hours",
+    "rating": 4.8,
+    "level": "Intermediate",
+    "description": "Learn ML algorithms and models.",
+    "image": "https://ibb.co.com/zhrm5x4Z",
+    "category": "Data Science"
+  },
+  {
+    "id": 12,
+    "title": "Content Writing Mastery",
+    "instructor": "Emma Thomas",
+    "duration": "8 hours",
+    "rating": 4.5,
+    "level": "Beginner",
+    "description": "Write engaging content online.",
+    "image": "https://ibb.co.com/Bx3PGZk",
+    "category": "Marketing"
+  },
+  {
+    "id": 13,
+    "title": "Next.js Full Guide",
+    "instructor": "William Scott",
+    "duration": "17 hours",
+    "rating": 4.9,
+    "level": "Advanced",
+    "description": "Build SSR apps with Next.js.",
+    "image": "https://ibb.co.com/TxLb1KbJ",
+    "category": "Development"
+  },
+  {
+    "id": 14,
+    "title": "Freelancing for Beginners",
+    "instructor": "Ava Harris",
+    "duration": "7 hours",
+    "rating": 4.6,
+    "level": "Beginner",
+    "description": "Start earning online as a freelancer.",
+    "image": "https://ibb.co.com/HfnBcscN",
+    "category": "Career"
+  }
+]
