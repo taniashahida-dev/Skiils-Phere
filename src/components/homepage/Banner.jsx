@@ -9,32 +9,35 @@ const Banner = () => {
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 4 }}
         className="absolute w-80 h-80 bg-purple-500 opacity-10 rounded-full -top-15 -right-15"
       ></motion.div>
 
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
-        transition={{ duration: 1, delay: 0.3 }}
+        transition={{ duration: 1, delay: 3.3 }}
         className="absolute w-70 h-70 bg-purple-500 opacity-10 rounded-full -bottom-20 -left-20"
       ></motion.div>
 
-      <div className="space-y-4 relative z-10">
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.2 }}
+      className="space-y-4 relative z-10">
         
         <motion.p
-          initial={{ y: -80, opacity: 0}}
-          animate={{ y: 0, opacity: 1  }}
-          transition={{ duration: 0.5 }}
+         initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+       
           className="bg-[#3b378a] inline-block px-4 py-1 rounded-full text-sm"
         >
           🟢 500+ courses now available
         </motion.p>
 
         <motion.h1
-         initial={{ y: -80, opacity: 0}}
-          animate={{ y: 0, opacity: 1  }}
-          transition={{ duration: 0.5 }}
+         initial={{ y: 30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
           className="text-3xl md:text-5xl font-bold"
         >
           Upgrade your skills. <br />
@@ -43,9 +46,8 @@ const Banner = () => {
         </motion.h1>
 
         <motion.p
-          initial={{ y: -80, opacity: 0}}
-          animate={{ y: 0, opacity: 1  }}
-          transition={{ duration: 0.5 }}
+           initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
           className="text-gray-300"
         >
           Learn from industry experts at your own pace. Earn certificates and
@@ -54,7 +56,7 @@ const Banner = () => {
 
         {/* buttons */}
         <motion.div
-          initial={{ opacity: 0 }}
+           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           className="flex gap-4 flex-wrap"
         >
@@ -68,33 +70,62 @@ const Banner = () => {
         </motion.div>
 
         {/* stats */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="flex gap-6 flex-wrap mt-6"
-        >
-          <div>
-            <h2 className="font-bold">500+</h2>
-            <p className="text-gray-300 text-sm">Courses</p>
-          </div>
+       <motion.div
+  initial="hidden"
+  animate="visible"
+  className="flex gap-6 flex-wrap mt-6"
+>
+  
+  {/* 1 */}
+  <motion.div
+    variants={{
+      hidden: { opacity: 0, x: 50 },
+      visible: { opacity: 1, x: 0 }
+    }}
+    transition={{ delay: 0.2 }}
+  >
+    <h2 className="font-bold">500+</h2>
+    <p className="text-gray-300 text-sm">Courses</p>
+  </motion.div>
 
-          <div>
-            <h2 className="font-bold">50K+</h2>
-            <p className="text-gray-300 text-sm">Students</p>
-          </div>
+  {/* 2 */}
+  <motion.div
+    variants={{
+      hidden: { opacity: 0, x: 50 },
+      visible: { opacity: 1, x: 0 }
+    }}
+    transition={{ delay: 0.4 }}
+  >
+    <h2 className="font-bold">50K+</h2>
+    <p className="text-gray-300 text-sm">Students</p>
+  </motion.div>
 
-          <div>
-            <h2 className="font-bold">120+</h2>
-            <p className="text-gray-300 text-sm">Instructors</p>
-          </div>
+  {/* 3 */}
+  <motion.div
+    variants={{
+      hidden: { opacity: 0, x: 50 },
+      visible: { opacity: 1, x: 0 }
+    }}
+    transition={{ delay: 0.6 }}
+  >
+    <h2 className="font-bold">120+</h2>
+    <p className="text-gray-300 text-sm">Instructors</p>
+  </motion.div>
 
-          <div>
-            <h2 className="font-bold">4.9★</h2>
-            <p className="text-gray-300 text-sm">Avg rating</p>
-          </div>
-        </motion.div>
+  {/* 4 */}
+  <motion.div
+    variants={{
+      hidden: { opacity: 0, x: 50 },
+      visible: { opacity: 1, x: 0 }
+    }}
+    transition={{ delay: 0.8 }}
+  >
+    <h2 className="font-bold">4.9★</h2>
+    <p className="text-gray-300 text-sm">Avg rating</p>
+  </motion.div>
 
-      </div>
+</motion.div>
+      </motion.div>
     </div>
   );
 };

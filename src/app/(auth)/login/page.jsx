@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { authClient } from "@/lib/auth-client";
 import { toast } from "react-toastify";
 
+
 const LoginPage = () => {
   const {
     register,
@@ -30,6 +31,14 @@ const LoginPage = () => {
   toast.success("Login Successful!!!")
     }
   };
+
+
+
+const googleSignIn = async () => {
+  const data = await authClient.signIn.social({
+    provider: "google",
+  });
+};
 
   return (
     <motion.div
@@ -95,19 +104,20 @@ const LoginPage = () => {
       <motion.div
         whileHover={{ scale: 1.03 }}
         className="flex items-center gap-2 justify-center border border-gray-500 bg-gray-800 p-2 rounded-xl cursor-pointer"
+        onClick={googleSignIn}
       >
-        Login with
+        Login with 
         <span className="text-xl flex items-center">
-          <FcGoogle />
+           <FcGoogle />
           <p>oogle</p>
         </span>
       </motion.div>
 
       {/* Register Link */}
       <p className="my-3 text-sm text-center sm:text-left">
-        New here?
+        New here? 
         <Link className="text-purple-400" href={"/registration"}>
-          Create a Skills-Phere Account
+           Create a Skills-Phere Account
         </Link>
       </p>
     </motion.div>

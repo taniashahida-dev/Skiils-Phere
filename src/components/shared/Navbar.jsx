@@ -6,12 +6,11 @@ import { GrTechnology } from "react-icons/gr";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
-import { HiMenu } from "react-icons/hi";
-import { div } from "framer-motion/client";
 import { RiMenu2Fill } from "react-icons/ri";
+import { FaUserAstronaut } from "react-icons/fa6";
 
 const Navbar = () => {
-  const { data: session } = authClient.useSession();
+  const { data: session,isPending } = authClient.useSession();
   const userData = session?.user;
   console.log(userData);
   const [open, setOpen] = useState(false);
@@ -25,7 +24,7 @@ const Navbar = () => {
     >
       <div className="flex justify-between items-center w-11/12 md:w-10/12 mx-auto">
         <div className="flex items-center gap-2">
-          <button className="md:hidden -ml-5" onClick={() => setOpen(!open)}>
+          <button className="md:hidden -ml-5 text-white" onClick={() => setOpen(!open)}>
            
             <RiMenu2Fill size={24}/>
           </button>
@@ -47,26 +46,26 @@ const Navbar = () => {
           </ul>
         </div>
 
-        {userData ? (
+        {isPending?<span className="loading loading-ring loading-xl"></span>: userData ? (
           <div className="flex gap-4 items-center ">
-            <p>Hello {userData.name}!!</p>{" "}
+          <span className="text-2xl p-2 bg-purple-600 rounded-full"> <FaUserAstronaut /></span>
             <button
-              className="border px-4 py-1 rounded-lg hover:bg-gray-900"
+              className="border md:px-6 px-3 py-1 rounded-lg hover:bg-gray-900"
               onClick={async () => await authClient.signOut()}
             >
               Logout
             </button>
           </div>
         ) : (
-          <div className="flex gap-4">
-            {" "}
-            <Link href={"/login"}>
-              <button className="border px-2 md:px-4 py-1 rounded-lg hover:bg-gray-900">
+          <div className="flex gap-4 text-gray-100">
+           
+            <Link href={'/login'}>
+              <button className="border border-gray-200 px-2 md:px-4 py-1 rounded-lg hover:bg-gray-900">
                 Login
               </button>
             </Link>
             <Link href={"/registration"}>
-              <button className="border px-2 md:px-4 py-1 rounded-lg hover:bg-gray-900">
+              <button className="border border-gray-200 px-2 md:px-4 py-1 rounded-lg hover:bg-gray-900">
                 Register
               </button>
             </Link>
