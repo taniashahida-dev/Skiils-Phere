@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion"
+import Image from "next/image";
 
 const TopInstrustor = () => {
     return (
@@ -15,10 +16,10 @@ const TopInstrustor = () => {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         
         {[
-          { name: "John Doe", role: "Full-Stack Dev", courses: 12, rating: 4.9, initials: "JD" },
-          { name: "Sarah Lee", role: "UX Designer", courses: 8, rating: 4.9, initials: "SL" },
-          { name: "Mark Taylor", role: "Growth Marketer", courses: 6, rating: 4.8, initials: "MT" },
-          { name: "Aisha Raza", role: "Data Scientist", courses: 10, rating: 4.7, initials: "AR" },
+          { name: "Jhankar Mahbub", role: "Full-Stack Dev", courses: 12, rating: 4.9, image: "https://i.ibb.co/gMDxq3hR/1677507599579-e-2147483647-v-beta-t-Ls0z-B8-ECy-R1hp4iepkmh-X5a62n-P6-Tlhz-Cp1-ZEghic-I.jpg" },
+          { name: "Ahashan Habib Utsho", role: "JavaScript Deep Dive", courses: 8, rating: 4.9, image: "https://i.ibb.co/SXmrq4TH/117377338-v-4.jpg" },
+          { name: "Fahim Prodhan", role: "Advanced React Mastery", courses: 6, rating: 4.8, image: "https://i.ibb.co/JFr29Sbv/1703805951276-e-2147483647-v-beta-t-Oop-J6-Nrc-B5w-Xp-7c-KJh6u-CRJg-RMd-Njn-Cz67-IIis-Ik-IM.jpg" },
+          { name: "Abdur Rakib", role: "Data Scientist", courses: 10, rating: 4.7, image: "https://i.ibb.co/KxCTR1Hq/1750676584597-e-2147483647-v-beta-t-Gmy-ARBr-Tr-Ad2s-S0-G2kq39-AV3reu-T-c-KXKZe-Mr3-Wp-Fw-A.jpg" },
         ].map((item, i) => (
           <motion.div
             key={i}
@@ -29,9 +30,8 @@ const TopInstrustor = () => {
             className="border border-gray-700 rounded-xl p-5 text-center hover:border-purple-500 transition"
           >
             
-            <div className="w-14 h-14 mx-auto rounded-full bg-gray-300 text-black flex items-center justify-center font-bold mb-3">
-              {item.initials}
-            </div>
+           <Image src= {item?.image} width={80} height={80} alt={item.name} className=" mx-auto  rounded-full">
+           </Image>
 
             <h2 className="font-semibold">{item.name}</h2>
             <p className="text-gray-400 text-sm">{item.role}</p>

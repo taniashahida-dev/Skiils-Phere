@@ -12,7 +12,7 @@ import { FaUserAstronaut } from "react-icons/fa6";
 const Navbar = () => {
   const { data: session,isPending } = authClient.useSession();
   const userData = session?.user;
-  console.log(userData);
+  // console.log(userData);
   const [open, setOpen] = useState(false);
 
   return (
