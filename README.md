@@ -42,7 +42,6 @@ Whether you're a complete beginner or looking to level up your expertise, SkillS
 
 ## 📸 Screenshots
 
-> *(Add screenshots of your homepage, course listing, course detail, and profile pages here)*
 
 | Home Page | All Courses | Course Detail |
 |-----------|-------------|---------------|

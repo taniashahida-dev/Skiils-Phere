@@ -39,16 +39,16 @@ const Courses = () => {
                 onChange={(e) => setSearch(e.target.value)}
             />
            </div>
-
-            <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4'>
-                {
-                    filteredCourses.length > 0
-                        ? filteredCourses.map(d => (
-                            <CourseCard key={d.id} card={d} />
-                        ))
-                        : <p>No courses found</p>
-                }
-            </div>
+         
+                  {  filteredCourses.length > 0 ?  (<div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4'>
+                        { filteredCourses.map(d =>  
+                           (<CourseCard key={d.id} card={d} />)
+                        
+                        )}
+                       </div>)
+                
+           : <div className="  flex justify-center items-center   min-h-[80vh]"><p className="  text-4xl font-semibold p-4 text-gray-600 ">No courses found</p></div>}
+            
         </div>
     );
 };
