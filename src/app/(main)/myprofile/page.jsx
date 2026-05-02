@@ -20,7 +20,7 @@ const MyProfile = () => {
     );
   }
 
-  // ❌ If no user
+  
   if (!userData) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -31,16 +31,11 @@ const MyProfile = () => {
 
   return (
 
- 
-
-
-
-
     <div className="min-h-[80vh] flex  justify-center  p-4">
       <motion.div
        whileHover={{ y: -6 }}
       transition={{ duration: 0.3 }}
-      className="bg-white/5 w-3/12 backdrop-blur-lg p-3 md:p-8 text-white rounded-2xl border border-white/10 overflow-hidden shadow-md hover:shadow-xl transition "
+      className="bg-white/5 w-11/12 md:w-3/12 backdrop-blur-lg p-3 md:p-8 text-white rounded-2xl border border-white/10 overflow-hidden shadow-md hover:shadow-xl transition "
       >
         <div className="flex flex-col  items-center gap-4">
           
