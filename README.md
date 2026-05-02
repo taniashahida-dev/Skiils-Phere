@@ -46,7 +46,7 @@ Whether you're a complete beginner or looking to level up your expertise, SkillS
 
 | Home Page | All Courses | Course Detail |
 |-----------|-------------|---------------|
-| ![Home](![alt text](image.png)) | ![Courses](![alt text](image-1.png)) | ![Detail](![alt text](image-2.png)) |
+| ![alt text](image.png) | ![alt text](image-1.png)| ![alt text](image-2.png) |
 
 ---
 
@@ -151,6 +151,6 @@ Tania
 
 <div align="center">
 
-Made with ❤️ and a lot of ☕ &nbsp;|&nbsp; © 2025 SkillSphere
+Made with ❤️ and a lot of ☕ &nbsp;|&nbsp; © 2026 SkillSphere
 
 </div>
