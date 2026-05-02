@@ -5,10 +5,14 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { authClient } from "@/lib/auth-client";
 import { toast } from "react-toastify";
+import { FiEye } from "react-icons/fi";
+import { RiEyeCloseLine } from "react-icons/ri";
+import { useState } from "react";
 
 
 const RegPage = () => {
   const router = useRouter();
+  const [viewPass,setViewpass] = useState(false)
 
   const {
     register,
@@ -29,8 +33,9 @@ console.log(data)
            toast.warning(error.message)
            return  }
         else { 
-          toast.success("Signin Successfull!!")
+         toast.success("Signin Successfull!!")
           router.push("/login")
+           
          }
          
   };
@@ -91,16 +96,21 @@ console.log(data)
           </fieldset>
 
           {/* Password */}
-          <fieldset className="fieldset">
+          <fieldset className="fieldset relative">
             <legend className="fieldset-legend">Password</legend>
             <input
-              type="password"
+              type={viewPass?"text": "password"}
               className="input w-full focus:ring-2 focus:ring-purple-500"
               placeholder="Enter Your Password"
               {...register("password", {
                 required: "Please enter password**",
               })}
             />
+              <span className="cursor-pointer text-xl text-purple-500 absolute top-3.5 right-1" onClick={()=>setViewpass(!viewPass)}>
+                          {
+                            viewPass?<FiEye />:<RiEyeCloseLine />
+                          }
+                        </span>
             {errors.password && (
               <p className="text-xs text-red-500">{errors.password.message}</p>
             )}

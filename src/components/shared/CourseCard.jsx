@@ -10,7 +10,7 @@ const CourseCard = ({ card }) => {
     <motion.div
       whileHover={{ y: -6 }}
       transition={{ duration: 0.3 }}
-      className="bg-white/5 backdrop-blur-lg text-white rounded-2xl border border-white/10 overflow-hidden shadow-md hover:shadow-xl transition mb-10"
+      className="bg-white/5 backdrop-blur-lg text-white rounded-2xl border border-white/10 overflow-hidden shadow-md hover:shadow-xl transition mb-4 md:mb-10"
     >
       {/* Image Section */}
       <div className="relative h-52 w-full overflow-hidden">

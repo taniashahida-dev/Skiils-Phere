@@ -64,12 +64,12 @@ const Navbar = () => {
           <div className="flex gap-4 text-white">
            
             <Link href={'/login'}>
-              <button className="border border-gray-200 px-2 md:px-4 py-1 rounded-lg hover:bg-gray-900">
+              <button className="border border-gray-200 px-2 md:px-4 py-1 rounded-lg hover:bg-gray-900 hover:border-purple-600 ">
                 Login
               </button>
             </Link>
             <Link href={"/registration"}>
-              <button className="border border-gray-200 px-2 md:px-4 py-1 rounded-lg hover:bg-gray-900">
+              <button className="border border-gray-200 px-2 md:px-4 py-1 rounded-lg hover:bg-gray-900 hover:border-purple-600">
                 Register
               </button>
             </Link>
