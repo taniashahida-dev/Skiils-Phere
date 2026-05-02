@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Banner = () => {
   return (
-    <div className="bg-[#2d2a6e] text-white p-6 md:p-16 relative overflow-hidden">
+    <div className="bg-[#2d2a6e] text-white p-6 md:p-16 relative overflow-hidden w-11/12 mx-auto md:w-10/12">
       
       {/* Circle 1 (top right) */}
       <motion.div

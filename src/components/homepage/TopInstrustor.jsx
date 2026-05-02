@@ -37,7 +37,7 @@ const TopInstrustor = () => {
             <h2 className="font-semibold">{item.name}</h2>
             <p className="text-gray-400 text-sm">{item.role}</p>
 
-            <p className="text-purple-400 text-sm mt-2 flex gap-1 items-center">
+            <p className="text-purple-400 text-sm mt-2 flex gap-1 justify-center  items-center">
               {item.courses} courses • <CiStar />{item.rating}
             </p>
           </motion.div>
