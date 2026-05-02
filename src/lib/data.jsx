@@ -1,14 +1,9 @@
-import React from 'react';
+
 
 const getdata = async () => {
-  const baseUrl =
-  process.env.NODE_ENV === "development"
-    ? "http://localhost:3000"
-    : "https://skills-phere.vercel.app";
-
-const res = await fetch(`${baseUrl}/data/courses.json`, {
-  cache: "no-store",
-});
+  const res = await fetch("https://skills-phere.vercel.app/data/courses.json", {
+    cache: "no-store",
+  });
     return res.json()
 };
 
