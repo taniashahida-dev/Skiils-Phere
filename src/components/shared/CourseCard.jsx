@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa6";
 import Link from "next/link";
 const CourseCard = ({ card }) => {
-  console.log(card);
+  // console.log(card);
   return (
     <motion.div
       whileHover={{ y: -6 }}

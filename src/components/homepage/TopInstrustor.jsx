@@ -1,10 +1,11 @@
 "use client";
 import { motion } from "framer-motion"
 import Image from "next/image";
+import { CiStar } from "react-icons/ci";
 
 const TopInstrustor = () => {
     return (
-          <div className="p-6 md:p-12 bg-[#1f1f1f] text-white">
+          <div className="my-4 md:my-10 text-white w-11/12 md:w-10/12 mx-auto">
       
       <div className="mb-6">
         <h1 className="text-2xl font-bold">Top instructors</h1>
@@ -27,7 +28,7 @@ const TopInstrustor = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.2 }}
             whileHover={{ scale: 1.05 }}
-            className="border border-gray-700 rounded-xl p-5 text-center hover:border-purple-500 transition"
+            className="border border-gray-700 rounded-xl p-3 md:p-5 text-center hover:border-purple-500 transition"
           >
             
            <Image src= {item?.image} width={80} height={80} alt={item.name} className=" mx-auto  rounded-full">
@@ -36,8 +37,8 @@ const TopInstrustor = () => {
             <h2 className="font-semibold">{item.name}</h2>
             <p className="text-gray-400 text-sm">{item.role}</p>
 
-            <p className="text-purple-400 text-sm mt-2">
-              {item.courses} courses • ★{item.rating}
+            <p className="text-purple-400 text-sm mt-2 flex gap-1 items-center">
+              {item.courses} courses • <CiStar />{item.rating}
             </p>
           </motion.div>
         ))}

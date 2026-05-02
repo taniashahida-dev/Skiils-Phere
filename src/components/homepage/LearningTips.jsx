@@ -7,7 +7,7 @@ import { TiTickOutline } from "react-icons/ti";
 
 const LearningTips = () => {
   return (
-      <div className="p-6 md:p-12 bg-[#1f1f1f] text-white">
+      <div className=" text-white w-11/12 md:w-10/12 mx-auto">
       
       <div className="mb-6">
         <h1 className="text-2xl font-bold">Learning tips</h1>

@@ -87,21 +87,22 @@
     "image": "https://i.ibb.co/nqz0qNGh/course-1745756529.jpg",
     "category": "Development"
   },
-  {
+   {
     "id": 9,
-    "title": "SEO Optimization Course",
-    "instructor": "Tahsin Alahi",
-    "duration": "9 hours",
+    "title": "Freelancing for Beginners",
+    "instructor": "Ahmed Salah",
+    "duration": "7 hours",
     "rating": 4.6,
     "level": "Beginner",
-    "description": "Improve website ranking on Google.",
-    "image": "https://i.ibb.co/1JjwCLDg/seo-optimization-banner-33099-1690.jpg",
-    "category": "Marketing"
-  },
+    "description": "Start earning online as a freelancer.",
+    "image": "https://i.ibb.co/21gWzQz8/Freelance-Job-Categories.png",
+    "category": "Career"
+  }
+ ,
   {
     "id": 10,
-    "title": "Jannatul Mariam",
-    "instructor": "Daniel White",
+    "title": "Apps Development",
+    "instructor": "Jannatul Mariam",
     "duration": "11 hours",
     "rating": 4.7,
     "level": "Intermediate",
@@ -141,16 +142,16 @@
     "description": "Build SSR apps with Next.js.",
     "image": "https://i.ibb.co/v6YQhsQf/1-GX59i-Id-Rx4ozaf-Nl-UT10ug.png",
     "category": "Development"
-  },
-  {
+  }, {
     "id": 14,
-    "title": "Freelancing for Beginners",
-    "instructor": "Ahmed Salah",
-    "duration": "7 hours",
+    "title": "SEO Optimization Course",
+    "instructor": "Tahsin Alahi",
+    "duration": "9 hours",
     "rating": 4.6,
     "level": "Beginner",
-    "description": "Start earning online as a freelancer.",
-    "image": "https://i.ibb.co/21gWzQz8/Freelance-Job-Categories.png",
-    "category": "Career"
+    "description": "Improve website ranking on Google.",
+    "image": "https://i.ibb.co/1JjwCLDg/seo-optimization-banner-33099-1690.jpg",
+    "category": "Marketing"
   }
+ 
 ]

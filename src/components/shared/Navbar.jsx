@@ -8,6 +8,8 @@ import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
 import { RiMenu2Fill } from "react-icons/ri";
 import { FaUserAstronaut } from "react-icons/fa6";
+import { HiOutlineLogout } from "react-icons/hi";
+import Image from "next/image";
 
 const Navbar = () => {
   const { data: session,isPending } = authClient.useSession();
@@ -29,12 +31,12 @@ const Navbar = () => {
             <RiMenu2Fill size={24}/>
           </button>
 
-          <div className="flex items-center gap-2 text-lg md:text-2xl">
+        <Link href={'/'}>  <div className="flex items-center gap-2 text-lg md:text-2xl">
             <span className="bg-purple-500 p-2 rounded-xl">
               <GrTechnology />
             </span>
             <h1 className="text-purple-600 font-bold">SkillSphere</h1>
-          </div>
+          </div></Link>
         </div>
 
         {/* Desktop Nav */}
@@ -48,12 +50,14 @@ const Navbar = () => {
 
         {isPending?<span className="loading loading-ring loading-xl"></span>: userData ? (
           <div className="flex gap-4 items-center ">
-          <span className="text-2xl p-2 bg-purple-600 rounded-full"> <FaUserAstronaut /></span>
+            <Image src={userData.image} height={40} width={40} alt={userData.name} className="w-10 h-10 rounded-full border-2 border-purple-500  "></Image>
+        
             <button
-              className="border md:px-6 px-3 py-1 rounded-lg hover:bg-gray-900"
+              className="border md:px-6 px-3 py-1 rounded-lg hover:bg-gray-900 flex gap-1 items-center"
               onClick={async () => await authClient.signOut()}
             >
               Logout
+              <HiOutlineLogout />
             </button>
           </div>
         ) : (
