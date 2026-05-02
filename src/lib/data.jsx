@@ -1,9 +1,14 @@
 
 
 const getdata = async () => {
-  const res = await fetch("https://skills-phere.vercel.app/data/courses.json", {
-    cache: "no-store",
-  });
+  const baseUrl =
+  process.env.NODE_ENV === "development"
+    ? "http://localhost:3000"
+    : "https://skills-phere.vercel.app";
+
+const res = await fetch(`${baseUrl}/data/courses.json`, {
+  cache: "no-store",
+});
     return res.json()
 };
 
