@@ -35,7 +35,7 @@ const UpdateProfile = () => {
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="w-full  bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-lg"
+        className="w-full max-w-md bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-lg"
       >
         <h1 className="text-xl sm:text-2xl font-semibold mb-4 text-center">
           Update Profile
