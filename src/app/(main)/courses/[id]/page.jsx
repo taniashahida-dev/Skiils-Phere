@@ -1,19 +1,30 @@
+"use client";
 
+import { useEffect, useState } from "react";
 import DetailsCard from "@/components/shared/DetailsCard";
-import getdata from "@/lib/data";
 
-const CourseDetails = async ({ params }) => {
-  const param = await params;
+const CourseDetails = ({ params }) => {
+  const [data, setData] = useState([]);
+  const [findData, setFindData] = useState(null);
 
-  const courses = await getdata();
-  const findData = courses.find((data) => data.id == param.id);
-  console.log(findData);
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch("/data/courses.json");
+      const result = await res.json();
+      setData(result);
 
- 
-  return (
-   
-    <DetailsCard findData={findData}></DetailsCard>
-  );
+      const found = result.find((item) => item.id == params.id);
+      setFindData(found);
+    };
+
+    fetchData();
+  }, [params.id]);
+
+  if (!findData) {
+    return <p>Loading...</p>;
+  }
+
+  return <DetailsCard findData={findData} />;
 };
 
 export default CourseDetails;
