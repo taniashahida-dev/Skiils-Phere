@@ -1,12 +1,11 @@
 
 
-const getdata = async () => {
-  const baseUrl =
-  process.env.NODE_ENV === "development"
-    ? "http://localhost:3000"
-    : "https://skills-phere.vercel.app";
 
-const res = await fetch(`${baseUrl}/data/courses.json`, {
+
+const getdata = async () => {
+
+
+const res = await fetch("http://localhost:3000/data/courses.json", {
   cache: "no-store",
 });
     return res.json()
